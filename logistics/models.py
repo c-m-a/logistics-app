@@ -14,3 +14,12 @@ class Customer(models.Model):
     class Meta:
         ordering = ['fullname']
 
+
+class Courier(models.Model):
+    id = models.CharField(max_length=128, default=uuid.uuid4, unique=True, primary_key=True, editable=False)
+    name = models.CharField(max_length=128)
+    phone = models.CharField(max_length=32)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.name)
