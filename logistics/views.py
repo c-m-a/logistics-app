@@ -129,7 +129,7 @@ def package_assign_courier(request, pk=None, courier_id=None):
     serializer = PackageSerializer(package)
     return Response(serializer.data)
     
-@api_view(['POST'])
+@api_view(['PUT'])
 def package_delivered(request, pk=None):
     try:
         package = Package.objects.get(pk=pk)
