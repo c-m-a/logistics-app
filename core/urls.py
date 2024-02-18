@@ -15,4 +15,15 @@ urlpatterns = [
     path('customers/add/', customer_add, name="customer_add"),
     path('customers/edit/<pk>/', customer_edit, name="customer_add"),
     path('customers/delete/<pk>/', customer_delete, name="customer_delete"),
+
+    # API REST packages
+    path('api/packages/<pk>/assign-courier/<courier_id>', package_assign_courier, name="package_assign_courier"),
+    path('api/packages/<pk>/delivered/', package_delivered, name="package_delivered"),
+    
+    path('packages/', package_list, name="package_list"),
+    path('packages/add/', package_add, name="package_add"),
+    path('packages/by-courier/', package_by_courier, name="packages_by_courier"),
+    path('packages/by-customer/', package_by_customer, name="packages_by_customer"),
+    path('packages/edit/<pk>/', package_edit, name="package_edit"),
+    path('packages/delete/<pk>/', package_delete, name="package_delete"),
 ]
