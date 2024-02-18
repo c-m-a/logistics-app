@@ -1,0 +1,21 @@
+{% block content %}
+  <h2>Package List by Customer</h2>
+
+  {% for group in grouped_pkgs %}
+    <h3>{{ group.sender.fullname }}</h3>
+    <div class="flex">
+      <p class="mr-sm"><strong>Phone:</strong> {{ group.sender.phone }}</p>
+      <p><strong>Address:</strong>{{ group.sender.address }}</p>
+    </div>
+    <ul>
+      {% for pkg in group.pkgs %}
+        <li><strong>ID:</strong> {{ pkg.id }}</li>
+        <li>Weight: {{ pkg.weight }}</li>
+        <li>Dimensions: {{ pkg.dimensions }}</li>
+        <li>Origin Address: {{ pkg.origin_address }}</li>
+        <li>Destination Address: {{ pkg.destination_address }}</li>
+        <li>Status: {{ pkg.status }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% endblock %}
