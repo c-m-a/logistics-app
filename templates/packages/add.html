@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <h2>Create Shipping</h2>
+  </div>
+  <form method="POST">
+    {% csrf_token %}
+      <h3>Customer's Details</h3>
+      <div class="grid">
+        {{ customer_form.as_p }}
+      </div>
+      <div>
+        <h3>Package's Details</h3>
+        {{ package_form }}
+      </div>
+    <div class="grid">
+      <div></div><div></div>
+      <div></div><div></div>
+      <a class="btn-h-md contrast" tabindex="0" role="button" href="{{ request.META.HTTP_REFERER }}">Cancel</a>
+      <button type="submit">Create</button>
+    </div>
+  </form>
+{% endblock %}
