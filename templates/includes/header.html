@@ -1,0 +1,18 @@
+<header class="container-fluid">
+  <nav>
+    <ul>
+      <li>
+        <h4>
+          <a href="{% url 'home' %}">
+            <strong>Logistics</strong>
+          </a>
+        </h4>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="{% url 'customer_list' %}">Customers</a></li>
+      <li><a href="{% url 'courier_list' %}">Couriers</a></li>
+      <li><a href="{% url 'package_list' %}">Packages</a></li>
+    </ul>
+  </nav>
+</header>
