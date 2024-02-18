@@ -1,0 +1,64 @@
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-i-center {
+  align-items: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.h-full {
+  display: block;
+  height: 100%;
+}
+
+.h-s {
+  height: 1.5rem;
+}
+
+.btn-h-md {
+  height: 3.1rem;
+}
+
+.ml-sm {
+  margin-left: .5rem;
+}
+
+.mx-sm {
+  margin: 0 .5rem 0 .5rem;
+}
+
+.mr-xs {
+  margin-right: .3rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-md {
+  width: 8rem;
+}
+
+.w-s {
+  width: 1.5rem;
+}
+
+.txt-cap {
+  text-transform: capitalize;
+}
